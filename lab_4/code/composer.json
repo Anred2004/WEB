@@ -1,0 +1,6 @@
+{
+    "name": "nastya/lab4",
+    "require": {
+        "google/apiclient": "^2.16"
+    }
+}
