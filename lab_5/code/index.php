@@ -9,10 +9,10 @@ if (mysqli_connect_errno()) {
 
 // Обработка формы
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $mysqli->real_escape_string($_POST['EMAIL']);
-    $title = $mysqli->real_escape_string($_POST['TITLE']);
-    $category = $mysqli->real_escape_string($_POST['CATEGORIES']);
-    $description = $mysqli->real_escape_string($_POST['TEXT']);
+    $email = $mysqli->real_escape_string($_POST['email']);
+    $title = $mysqli->real_escape_string($_POST['title']);
+    $category = $mysqli->real_escape_string($_POST['categories']);
+    $description = $mysqli->real_escape_string($_POST['text']);
 
     $query = "INSERT INTO ad (email, title, description, category) VALUES ('$email', '$title', '$description', '$category')";
     $mysqli->query($query);
