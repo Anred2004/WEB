@@ -10,9 +10,13 @@ services:
     links:
       - php
   php:
-    image: php:8.3-fpm
+    build: .
     volumes:
       - ./code:/code
+    depends_on:
+      - db
+    links:
+      - db
   db:
     image: mysql:8.0
     ports:
